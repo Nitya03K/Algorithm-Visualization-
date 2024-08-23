@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_closemenu"
+            style="@style/S_ImageButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/close"
+            android:src="@drawable/ic_close" />
+
+        <ImageButton
+            android:id="@+id/btn_helpmenu"
+            style="@style/S_ImageButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/help"
+            android:src="@drawable/ic_help" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/S_TextView_Heading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="@string/avl_tree" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/horizontalDiv7"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="false"
+        android:fadingEdgeLength="50dp"
+        android:requiresFadingEdge="vertical"
+        android:scrollbarSize="5dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_gradient_vertical"
+        android:verticalScrollbarPosition="left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalDiv7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:colorBackground"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_insert"
+                    style="@style/S_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/enter_number"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp" />
+
+                <ImageButton
+                    android:id="@+id/btn_insertrandom"
+                    style="@style/S_ImageButton"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/random"
+                    android:src="@drawable/ic_random" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/btn_insert"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/insert"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    style="@style/S_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/enter_number"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/btn_search"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/search"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_delete"
+                    style="@style/S_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/enter_number"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="?android:attr/listDivider" />
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/delete"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_preorder"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="@string/pre_order"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_inorder"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="@string/in_order"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_postorder"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="@string/post_order"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_example1"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="@string/example_1"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_example2"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="@string/example_2"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_example3"
+                    style="@style/S_ButtonTextOnly"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="@string/example_3"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_cleartree"
+                style="@style/S_ButtonTextOnly"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/clear_tree"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

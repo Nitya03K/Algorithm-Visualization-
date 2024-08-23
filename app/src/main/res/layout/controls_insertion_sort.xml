@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_closemenu"
+            style="@style/S_ImageButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/close"
+            android:src="@drawable/ic_close" />
+
+        <ImageButton
+            android:id="@+id/btn_helpmenu"
+            style="@style/S_ImageButton"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/help"
+            android:src="@drawable/ic_help" />
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/S_TextView_Heading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="@string/insertion_sort" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/horizontalDiv7"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="false"
+        android:fadingEdgeLength="50dp"
+        android:requiresFadingEdge="vertical"
+        android:scrollbarSize="5dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbVertical="@drawable/scrollbar_gradient_vertical"
+        android:verticalScrollbarPosition="left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalDiv7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:colorBackground"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/sw_randomarray"
+                    style="@style/S_Switch"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:checked="true"
+                    android:gravity="center|center_vertical"
+                    android:showText="false"
+                    android:text="@string/random_array"
+                    android:textAllCaps="false"
+                    android:textColorLink="#FFFFFF"
+                    android:textOff="@string/custom_array"
+                    android:textOn="@string/random_array"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/array_size"
+                    android:textColor="?attr/base"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/tv_arraysize"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/_1"
+                    android:textColor="?attr/base" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/sb_arraysize"
+                style="@style/S_SeekBar_Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:max="15"
+                android:progress="3" />
+
+            <TextView
+                style="@style/S_TextView_Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/or" />
+
+            <EditText
+                android:id="@+id/et_customarray"
+                style="@style/S_EditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:digits="0123456789,"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/comma_separated_ve_elements"
+                tools:ignore="Autofill,TextFields" />
+
+            <View
+                android:id="@+id/horizontalDiv"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="?android:attr/listDivider" />
+
+            <Button
+                android:id="@+id/btn_generate"
+                style="@style/S_ButtonTextOnly"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/generate"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_clear"
+                style="@style/S_ButtonTextOnly"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/clear"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

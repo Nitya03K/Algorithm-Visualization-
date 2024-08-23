@@ -1,0 +1,196 @@
+<resources>
+
+    <!-- Base/Parent Application Theme -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="fontFamily">@font/open_sans</item>
+    </style>
+
+    <!-- Application Themes -->
+    <!-- Theme BLUE -->
+    <style name="Theme_Blue" parent="BaseTheme">
+        <item name="shade"  >      @color/blue_shade      </item>
+        <item name="light"  >      @color/blue_light      </item>
+        <item name="base"   >      @color/blue_base       </item>
+        <item name="medium" >      @color/blue_medium     </item>
+        <item name="dark"   >      @color/blue_dark       </item>
+        <item name="opp"    >      @color/blue_opp        </item>
+    </style>
+
+    <!-- Theme PURPLE -->
+    <style name="Theme_Purple" parent="BaseTheme">
+        <item name="shade"  >      @color/purple_shade      </item>
+        <item name="light"  >      @color/purple_light      </item>
+        <item name="base"   >      @color/purple_base       </item>
+        <item name="medium" >      @color/purple_medium     </item>
+        <item name="dark"   >      @color/purple_dark       </item>
+        <item name="opp"    >      @color/purple_opp        </item>
+    </style>
+
+    <!-- Theme GREEN -->
+    <style name="Theme_Green" parent="BaseTheme">
+        <item name="shade"  >      @color/green_shade      </item>
+        <item name="light"  >      @color/green_light      </item>
+        <item name="base"   >      @color/green_base       </item>
+        <item name="medium" >      @color/green_medium     </item>
+        <item name="dark"   >      @color/green_dark       </item>
+        <item name="opp"    >      @color/green_opp        </item>
+    </style>
+
+    <!-- Theme ORANGE -->
+    <style name="Theme_Orange" parent="BaseTheme">
+        <item name="shade"  >      @color/orange_shade      </item>
+        <item name="light"  >      @color/orange_light      </item>
+        <item name="base"   >      @color/orange_base       </item>
+        <item name="medium" >      @color/orange_medium     </item>
+        <item name="dark"   >      @color/orange_dark       </item>
+        <item name="opp"    >      @color/orange_opp        </item>
+    </style>
+
+    <!-- Theme BROWN -->
+    <style name="Theme_Brown" parent="BaseTheme">
+        <item name="shade"  >      @color/brown_shade      </item>
+        <item name="light"  >      @color/brown_light      </item>
+        <item name="base"   >      @color/brown_base       </item>
+        <item name="medium" >      @color/brown_medium     </item>
+        <item name="dark"   >      @color/brown_dark       </item>
+        <item name="opp"    >      @color/brown_opp        </item>
+    </style>
+
+    <!-- Theme PINK -->
+    <style name="Theme_Pink" parent="BaseTheme">
+        <item name="shade"  >      @color/pink_shade      </item>
+        <item name="light"  >      @color/pink_light      </item>
+        <item name="base"   >      @color/pink_base       </item>
+        <item name="medium" >      @color/pink_medium     </item>
+        <item name="dark"   >      @color/pink_dark       </item>
+        <item name="opp"    >      @color/pink_opp        </item>
+    </style>
+
+    <!-- Custom Styles based on Current Theme -->
+    <style name="S_TextView_Normal">
+        <item name="android:textColor">?attr/base</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="S_TextView_Normal_Dark">
+        <item name="android:textColor">?attr/dark</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="S_TextView_Bold">
+        <item name="android:textColor">?attr/base</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="S_TextView_Heading">
+        <item name="android:textColor">?attr/medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="S_TextView_Splash_Name">
+        <item name="android:textColor">#2e3192</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="S_EditText">
+        <item name="android:textColor">?attr/base</item>
+        <item name="android:textColorHint">?attr/light</item>
+        <item name="android:backgroundTint">?attr/light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="S_ImageButton" parent="@style/Widget.AppCompat.ImageButton">
+        <item name="android:scaleType">center</item>
+        <item name="android:textColor">?attr/base</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="S_ButtonTextOnly">
+        <item name="android:textColor">?attr/base</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="S_Button_Filled" >
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/rounded_button</item>
+    </style>
+
+    <style name="S_Switch">
+        <item name="android:track">@drawable/switch_track</item>
+        <item name="android:thumbTint">?attr/medium</item>
+        <item name="android:textColor">?attr/base</item>
+    </style>
+
+    <style name="S_SeekBar_Discrete" parent="Widget.AppCompat.SeekBar.Discrete">
+        <item name="android:progressBackgroundTint">?attr/light</item>
+        <item name="android:progressTint">?attr/base</item>
+        <item name="android:thumbTint">?attr/base</item>
+    </style>
+
+    <style name="S_SeekBar_Continous" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">?attr/light</item>
+        <item name="android:progressTint">?attr/base</item>
+        <item name="android:thumbTint">?attr/base</item>
+    </style>
+
+    <style name="S_RadioGroup">
+        <item name="android:colorControlNormal">?attr/base</item>
+        <item name="android:colorControlActivated">?attr/medium</item>
+    </style>
+
+    <style name="S_RadioButton_Graph">
+        <item name="android:colorControlNormal">?attr/base</item>
+        <item name="android:colorControlActivated">?attr/medium</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">?attr/base</item>
+    </style>
+
+    <style name="S_CheckBox_Graph">
+        <item name="android:textAlignment">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:checked">true</item>
+    </style>
+
+    <style name="S_CheckBox_Tree" parent="S_CheckBox_Graph">
+        <item name="android:drawableTop">@drawable/graphs_tree_cb_tree</item>
+        <item name="android:textColor">@color/graph_tree</item>
+        <item name="android:text">@string/tree_edge</item>
+    </style>
+
+    <style name="S_CheckBox_Back" parent="S_CheckBox_Graph">
+        <item name="android:drawableTop">@drawable/graphs_tree_cb_back</item>
+        <item name="android:textColor">@color/graph_back</item>
+        <item name="android:text">@string/back_edge</item>
+    </style>
+
+    <style name="S_CheckBox_Cross" parent="S_CheckBox_Graph">
+        <item name="android:drawableTop">@drawable/graphs_tree_cb_cross</item>
+        <item name="android:textColor">@color/graph_cross</item>
+        <item name="android:text">@string/cross_edge</item>
+    </style>
+
+    <style name="S_CheckBox_Forward" parent="S_CheckBox_Graph">
+        <item name="android:drawableTop">@drawable/graphs_tree_cb_forward</item>
+        <item name="android:textColor">@color/graph_forward</item>
+        <item name="android:text">@string/forward_edge</item>
+    </style>
+
+</resources>

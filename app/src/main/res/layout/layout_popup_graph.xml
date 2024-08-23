@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_rect_border_large"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_popupgraphname"
+        style="@style/S_TextView_Heading"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/graph_tree"
+        app:layout_constraintEnd_toStartOf="@+id/btn_minimize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_minimize"
+        style="@style/S_ImageButton"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_minus" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_popupgraphname">
+
+        <View
+            android:id="@+id/divider10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.otaliastudios.zoom.ZoomLayout
+            android:id="@+id/zl_graphtree"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbarThumbHorizontal="@drawable/scrollbar_gradient_horizontal"
+            android:scrollbarThumbVertical="@drawable/scrollbar_gradient_vertical"
+            android:scrollbars="vertical|horizontal"
+            app:alignment="center"
+            app:animationDuration="280"
+            app:flingEnabled="true"
+            app:hasClickableChildren="false"
+            app:horizontalPanEnabled="true"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider10"
+            app:maxZoom="2"
+            app:maxZoomType="zoom"
+            app:minZoom=".5"
+            app:minZoomType="zoom"
+            app:oneFingerScrollEnabled="true"
+            app:overPinchable="true"
+            app:overScrollHorizontal="true"
+            app:overScrollVertical="true"
+            app:scrollEnabled="true"
+            app:threeFingersScrollEnabled="true"
+            app:transformation="centerInside"
+            app:transformationGravity="auto"
+            app:twoFingersScrollEnabled="true"
+            app:verticalPanEnabled="true"
+            app:zoomEnabled="true">
+
+            <ImageView
+                android:id="@+id/iv_graphtree"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/graph_tree" />
+
+        </com.otaliastudios.zoom.ZoomLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/shade"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <CheckBox
+                android:id="@+id/cb_tree"
+                style="@style/S_CheckBox_Tree"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/graph_tree" />
+
+            <CheckBox
+                android:id="@+id/cb_back"
+                style="@style/S_CheckBox_Back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/graph_back" />
+
+            <CheckBox
+                android:id="@+id/cb_forward"
+                style="@style/S_CheckBox_Forward"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/graph_forward" />
+
+            <CheckBox
+                android:id="@+id/cb_cross"
+                style="@style/S_CheckBox_Cross"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/graph_cross" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

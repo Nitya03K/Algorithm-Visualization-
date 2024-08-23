@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".runapp.activities.HomeActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:fadeScrollbars="false"
+        android:fadingEdgeLength="50dp"
+        android:requiresFadingEdge="horizontal"
+        android:scrollbarSize="8dp"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarThumbHorizontal="@drawable/scrollbar_gradient_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp" />
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_report"
+            style="@style/S_ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/about"
+            app:layout_constraintBottom_toTopOf="@+id/btn_about"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_bug" />
+
+        <ImageButton
+            android:id="@+id/btn_about"
+            style="@style/S_ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/about"
+            app:layout_constraintBottom_toTopOf="@+id/btn_themes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_developer" />
+
+        <ImageButton
+            android:id="@+id/btn_themes"
+            style="@style/S_ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/themes"
+            app:layout_constraintBottom_toTopOf="@+id/btn_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_theme" />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            style="@style/S_ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/close_application"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
